@@ -33,12 +33,10 @@ body {
 a {
     text-decoration: none;
     color: $accentLight;
-    font-size: 12px;
-    @include transition(all .4s ease-in-out);
+    @include transition(3s ease-in-out);
 
     &:hover {
-        color: $accentLight;
-        font-size: 18px;
-        @include transition(all .4s ease-in-out);
+        color: $warning;
+        @include transition(3s ease-in-out);
     }
 }
