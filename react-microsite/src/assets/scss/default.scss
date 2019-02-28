@@ -9,15 +9,9 @@ header {
     height: 90px;
     
     .logo{
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        @include translateY(-50%);
+        
     }
     nav {
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        @include translateY(-50%);
+        
     }
 }

@@ -4,14 +4,19 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <div className="logo">
-            LOGO
-        </div>
-        <nav class="nav">
-            <a class="nav-link active" href="/">Active</a>
-            <a class="nav-link" href="/">Link</a>
-            <a class="nav-link" href="/">Link</a>
-            <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a>
+        <nav className="site-header sticky-top py-1">
+          <div className="container d-flex flex-column flex-md-row justify-content-between">
+            <a className="py-2" href="/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+            </a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Tour</a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Product</a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Features</a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Enterprise</a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Support</a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Pricing</a>
+            <a className="py-2 d-none d-md-inline-block" href="/">Cart</a>
+          </div>
         </nav>
       </header>
     );
