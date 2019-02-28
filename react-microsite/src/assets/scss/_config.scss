@@ -1,0 +1,30 @@
+// vars
+$dark: #000000;
+$light: #ffffff;
+$accentLight: #e6e6e6;
+$accentDark: #333333;
+$warning: #ff1755;
+
+// fonts
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: $dark;
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Mixins
+
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+    transform: translateY($e);
+}
+
+@mixin transition($e) {
+    -webkit-transform: transition($e);
+    -moz-transform: transition($e);
+    transform: transition($e);
+}
