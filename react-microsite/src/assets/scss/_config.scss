@@ -5,25 +5,6 @@ $accentLight: #e6e6e6;
 $accentDark: #333333;
 $warning: #ff1755;
 
-// fonts
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: $dark;
-    font-weight: 400;
-    font-style: normal;
-}
-
-a {
-    text-decoration: none;
-    @mixin transition(.4s ease-in-out);
-
-    &:hover {
-        color: $warning
-        @mixin transition(.4s ease-in-out);
-    }
-}
 
 // Mixins
 
@@ -37,4 +18,25 @@ a {
     -webkit-transform: transition($e);
     -moz-transform: transition($e);
     transform: transition($e);
+}
+
+// fonts
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: $dark;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: $light;
+    @include transition(.4s ease-in-out);
+
+    &:hover {
+        color: $warning;
+        @include transition(.4s ease-in-out);
+    }
 }

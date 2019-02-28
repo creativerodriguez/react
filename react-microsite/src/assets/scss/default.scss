@@ -19,9 +19,5 @@ header {
         top: 50%;
         right: 15px;
         @include translateY(-50%);
-
-        a {
-            color: $light;
-        }
     }
 }
