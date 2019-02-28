@@ -9,8 +9,8 @@ var rename = require('gulp-rename');
 var changed = require('gulp-changed');
 
 // SCSS/CSS
-var SCSS_SRC = './src/Assets/scss/**/*.scss';
-var SCSS_DEST = './src/Assets/css';
+var SCSS_SRC = './src/assets/scss/**/*.scss';
+var SCSS_DEST = './src/assets/css';
 
 //Compile SCSS
 gulp.task('compile_scss', function(){
@@ -23,9 +23,12 @@ gulp.task('compile_scss', function(){
 });
 
 // detect changes in SCSS
-gulp.task('watch_css', function(){
+gulp.task('watch_scss', gulp.series('compile_scss', function(){
     gulp.watch(SCSS_SRC, ['compile_scss']);
-});
+}));
 
 // Run tasks
-gulp.task('default', ['watch_scss']);
+gulp.task('default', gulp.series('watch_scss', async function(done) { 
+    // default task code here
+    done();
+}));
