@@ -14,12 +14,13 @@ var SCSS_DEST = './src/assets/css';
 
 //Compile SCSS
 gulp.task('compile_scss', function(){
-    gulp.src(SCSS_SRC)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(minifyCSS())
-    .pipe(rename({ suffix: '.min'}))
-    .pipe(changed(SCSS_DEST))
-    .pipe(gulp.dest(SCSS_DEST));
+    return gulp.src(SCSS_SRC)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(minifyCSS())
+        .pipe(rename({ suffix: '.min'}))
+        .pipe(changed(SCSS_DEST))
+        .pipe(gulp.dest(SCSS_DEST))
+    
 });
 
 // detect changes in SCSS
