@@ -14,10 +14,10 @@ $warning: #ff1755;
     transform: translateY($e);
 }
 
-@mixin transition($e) {
-    -webkit-transform: transition($e);
-    -moz-transform: transition($e);
-    transform: transition($e);
+@mixin transition($e){
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
 }
 
 // fonts
@@ -30,13 +30,30 @@ body {
     font-style: normal;
 }
 
-a {
-    text-decoration: none;
-    color: $accentLight;
-    @include transition(3s ease-in-out);
+header {
 
-    &:hover {
-        color: $warning;
-        @include transition(3s ease-in-out);
-    }
+    div nav a {
+        color: $light !important;
+        text-decoration: none;
+        @include transition(.4 easy-in-out);
+        cursor: pointer;
+      
+        &:hover{
+          color: $warning;
+          text-decoration: none;
+          @include transition(.4 easy-in-out);
+        }
+      }
+
 }
+
+  
+  .container-fluid {
+    line-height: 24px;
+  }
+
+  footer {
+      nav a {
+          color: $accentDark;
+      }
+  }

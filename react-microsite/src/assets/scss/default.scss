@@ -9,9 +9,9 @@ header {
     height: 90px;
     
     .logo{
-        
+        color: $warning; 
     }
-    nav {
-        
-    }
+}
+a {
+    text-decoration: none;
 }
